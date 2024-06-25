@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+img{
+    /* user-select: none; */
+    /* pointer-events: none; */
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(images/bg.png);
+    background-size:cover;
+}
+.pole_div{
+    width: 550px;
+    height: 600px;
+    border: 3px rgb(57, 143, 205) solid;
+    border-radius: 5px;
+    /* padding: 5px; */
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.letters{
+    display: flex;
+    padding-left: 50px;
+    border-bottom: 3px rgb(57, 143, 205) solid ;
+    
+}
+.row{
+    display: flex;
+    /* padding-left: 50px; */
+    border-bottom: 3px rgb(57, 143, 205) solid ;
+    
+}
+
+.row p{
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px rgb(57, 143, 205) solid ;
+}
+
+.letters p {
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px rgb(57, 143, 205) solid ;
+    
+}
+.shipplace{
+   background: linear-gradient(132.07deg, #5172c3 0%, #042273 100%);
+   transition: all 0.5s;
+   cursor: pointer;
+}
+
+.shipplace:hover{
+    background: linear-gradient(132.07deg, #5e87ee 0%, #a735db 100%);
+    transform: scale(115%);
+    border-radius: 10px;
+    /* border: none; */
+}
+.gif{
+    pointer-events: none;
+}
+
+.ship{
+    /* transition: all 0.5s ; */
+}
+ .ship1{
+  width: 50px; 
+  height: 50px;  
+ }
+ 
+.ship2{
+    width: 50px;
+    height: 100px;
+}
+.ship3{
+    width: 50px;
+    height: 150px;
+}
+.ship4{
+    width: 50px;
+    height: 200px;
+}
+
+
+.hidden{
+    position: absolute;
+    opacity: 0;
+}
+
+.shipstay{
+    opacity: 1;
+}
+
+.horizontalShip{
+    
+    /* transform: rotate(90deg); */
+}
+
+.shipRotateRight{
+    transform: rotate(90deg);
+    transition: all 0.5s;
+}
+
+.shipRotateLeft{
+    transform: rotate(-90deg);
+    transition: all 0.5s;
+}
+.shipPanel{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+}
+
+.horizontalShip.ship2{
+    width: 100px;
+    height: 50px;
+}
+
+.horizontalShip.ship3{
+    width: 150px;
+    height: 50px;
+}
+
+.horizontalShip.ship4{
+    width: 200px;
+    height: 50px;
+}
+.test{
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 315px;
+    top: 512px;
+}
+.active{
+    background: linear-gradient(132.07deg, #79c351 0%, #0d7304 100%);
+}
+
+.shipplacebaned{
+    background: linear-gradient(132.07deg, #c35151 0%, #730404 100%);
+}
+.shipplacebaned:hover{
+    background: linear-gradient(132.07deg, #c35151 0%, #730404 100%);
+}
+.loseScreen{
+    background-color: rgba(255, 6, 6, 0.533);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s;
+    opacity: 0;
+    display: none;
+    align-items: center;
+    z-index: 1000000001;
+    justify-content: center;
+    flex-direction: column;
+}
+.winScreen{
+    background-color: rgba(0, 128, 0, 0.466);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s;
+    opacity: 0;
+    display: none;
+    align-items: center;
+    z-index: 1000000001;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.winScreen.activebg{
+    opacity: 1;
+}
+
+.loseScreen.activebg{
+    opacity: 1;
+}
+
+.winText{
+    color: white;
+    font-size: 120px;
+    font-family: "Russo One", sans-serif;
+  font-weight: 400;
+}
+.newGame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    border-radius: 50px;
+    border: 2px solid white;
+    font-size: 50px;
+    font-family: "Russo One", sans-serif;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.newGame:hover{
+    background-color: white;
+    color: #2d2d2d;
+}
+
+#startgame{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    border-radius: 50px;
+    border: 2px solid white;
+    font-size: 50px;
+    font-family: "Russo One", sans-serif;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#startgame:hover{
+    background-color: white;
+    color: #2d2d2d;
+}
